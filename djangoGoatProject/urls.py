@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from Goat import views
+
 urlpatterns = [
     url('admin/', admin.site.urls),
+    url(r'^$', views.home_page, name='home'),
 ]
